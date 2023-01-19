@@ -1,0 +1,29 @@
+.clients-section {
+  padding: 94px 0;
+
+  &__list {
+    display: flex;
+    gap: 30px;
+  }
+
+  &__icon {
+    display: flex;
+    width: 170px;
+    height: 92px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid;
+    border-radius: 4px;
+    border-color: var(--icon-color-secondary);
+    fill: var(--icon-color-secondary);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus,
+    &:active {
+      fill: var(--color-brand);
+      border-color: var(--color-brand);
+    }
+  }
+}

@@ -1,0 +1,138 @@
+.header {
+  border-bottom: 1px solid #ececec;
+
+  &__burger {
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__menu {
+    display: none;
+    @media (min-width: 768px) {
+      display: flex;
+      gap: 50px;
+    }
+  }
+
+  &__contact {
+    display: none;
+    @media (min-width: 768px) {
+      display: block;
+    }
+    @media (min-width: 1200px) {
+      display: flex;
+      gap: 40px;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 1;
+    gap: 93px;
+  }
+
+  &__container {
+    @media (min-width: 768px) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 308px;
+    }
+  }
+  //   @media (min-width: 481px) {
+  //     display: flex;
+  //     align-items: center;
+  //     justify-content: space-between;
+  //     gap: 308px;
+  //   }
+  // }
+
+  //   &__container {
+  //     @media (min-width: 481px) {
+  //     display: flex;
+  //     align-items: center;
+  //     justify-content: space-between;
+  //     gap: 308px;
+  //     }
+  //   }
+
+  //   &__nav {
+  //     display: flex;
+  //     align-items: center;
+  //     justify-content: space-between;
+  //     flex-grow: 1;
+  //     gap: 93px;
+  //   }
+
+  //   &__menu {
+  //     display: flex;
+  //     gap: 50px;
+  //   }
+
+  //   &__contact {
+  //     padding-left: 15px;
+  //   }
+
+  //   &__contact {
+  //     @media  (min-width: 480px) and (max-width: 769px) {
+  //       display: flex;
+  //     gap: 40px;
+  //     }
+  //   }
+
+  //   &__contact {
+  //     @media  (min-width: 769px) {
+  //     display: flex;
+  //     gap: 40px;
+  //     }
+  //   }
+
+  &__link-contact {
+    display: flex;
+    align-items: center;
+    // justify-content: space-between;
+    gap: 10px;
+    padding: 5px 15px;
+    // padding: 32px 0;
+    fill: var(--text-color-secondary);
+    color: var(--text-color-secondary);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+  }
+
+  &__link-menu {
+    position: relative;
+    padding: 32px 0;
+    color: var(--text-color-primary);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+
+    &--current {
+      color: var(--color-brand);
+    }
+
+    &--current::after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background-color: var(--color-brand);
+      border-radius: 2px;
+      content: "";
+    }
+  }
+
+  //   &__link-contact {
+  //     @media (max-width: 480px) {
+  //       display: none;
+  //     }
+  //   }
+}
