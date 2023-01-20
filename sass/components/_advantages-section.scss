@@ -1,7 +1,7 @@
 .advantage-section {
   padding: 60px 0 0;
 
-    &__title {
+  &__title {
     @include invisible-title;
   }
 
@@ -14,7 +14,7 @@
 
   &__icon {
     display: flex;
-    width: 270px;
+    max-width: 480px;
     height: 120px;
     margin-bottom: 30px;
     justify-content: center;
@@ -30,10 +30,31 @@
     color: var(--text-color-secondary);
   }
 
-  &__card:not(:last-child) {
-    margin-bottom: 30px;
-  }
+  &__list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+      }
 
+  // &__card:not(:last-child) {
+  //   margin-bottom: 30px;
+  // }
+
+  &__card {
+    @media (min-width: $bp-tablet) {
+      flex-basis: calc((100% - 30px) / 2);
+    }
+    @media (min-width: $bp-desktop) {
+      flex-basis: calc((100% - 90px) / 4);
+    }
+  }
+  
+  
+  // &__list {
+  //   @media (min-width: $bp-tablet) {
+  //     flex-basis: calc((100% - 60px) / 2);
+  //   }
+  // }
 }
 //   padding: 94px 0 0;
 

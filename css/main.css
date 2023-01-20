@@ -78,7 +78,7 @@ li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 270px;
+  max-width: 480px;
   height: 120px;
   margin-bottom: 30px;
   -webkit-box-pack: center;
@@ -96,8 +96,25 @@ li {
   line-height: 1.7;
   color: var(--text-color-secondary);
 }
-.advantage-section__card:not(:last-child) {
-  margin-bottom: 30px;
+.advantage-section__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 30px;
+}
+@media (min-width: 768px) {
+  .advantage-section__card {
+    -ms-flex-preferred-size: calc((100% - 30px) / 2);
+        flex-basis: calc((100% - 30px) / 2);
+  }
+}
+@media (min-width: 1200px) {
+  .advantage-section__card {
+    -ms-flex-preferred-size: calc((100% - 90px) / 4);
+        flex-basis: calc((100% - 90px) / 4);
+  }
 }
 
 .backdrop {
