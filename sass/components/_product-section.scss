@@ -1,5 +1,8 @@
 .product-section {
   padding: 94px 0;
+  @media (max-width: $bp-desktop - 0.5) {
+    display: none;
+  }
 
   &__list {
     display: flex;
