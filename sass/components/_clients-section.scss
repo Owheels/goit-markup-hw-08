@@ -1,14 +1,27 @@
 .clients-section {
-  padding: 94px 0;
+  padding: 60px 0;
+  @media (min-width: $bp-desktop) {
+    padding: 94px 0;
+  }
 
   &__list {
     display: flex;
+    flex-wrap: wrap;
     gap: 30px;
+  }
+
+  &__card {
+    flex-basis: calc((100% - 30px) / 2);
+    @media (min-width: $bp-tablet) {
+      flex-basis: calc((100% - 60px) / 3);
+    }
+    @media (min-width: $bp-desktop) {
+      flex-basis: calc((100% - 150px) / 6);
+    }
   }
 
   &__icon {
     display: flex;
-    width: 170px;
     height: 92px;
     justify-content: center;
     align-items: center;

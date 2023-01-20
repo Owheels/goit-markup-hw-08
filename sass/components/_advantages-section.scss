@@ -1,5 +1,8 @@
 .advantage-section {
   padding: 60px 0 0;
+  @media (min-width: $bp-desktop) {
+    padding: 94px 0;
+  }
 
   &__title {
     @include invisible-title;
