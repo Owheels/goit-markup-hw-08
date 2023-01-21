@@ -1,13 +1,28 @@
 .footer {
-    padding: 60px 0;
-  text-align: center;
-    background-color: var(--background-color-brand-primary);
+  padding: 60px 0;
+  background-color: var(--background-color-brand-primary);
+  @media (max-width: $bp-desktop - 0.5) {
+    text-align: center;
+  }
 
   &__container {
     position: relative;
-    // display: flex;
-    // gap: 70px;
-    // align-items: baseline;
+    @media (min-width: $bp-desktop) {
+      display: flex;
+    }
+  }
+
+  &__tablet-container {
+    @media (min-width: $bp-tablet) {
+      display: flex;
+      gap: 165px;
+      justify-content: center;
+      margin-bottom: 60px;
+    }
+    @media (min-width: $bp-desktop) {
+      gap: 70px;
+      margin-bottom: 0;
+    }
   }
 
   &__list:not(:last-child) {
@@ -29,5 +44,11 @@
     font-size: 14px;
     line-height: 1.7;
     font-style: normal;
+  }
+
+  &__nav {
+    @media (max-width: $bp-tablet - 0.5) {
+      margin-bottom: 60px;
+    }
   }
 }

@@ -232,11 +232,40 @@ li {
 
 .footer {
   padding: 60px 0;
-  text-align: center;
   background-color: var(--background-color-brand-primary);
+}
+@media (max-width: 1199.5px) {
+  .footer {
+    text-align: center;
+  }
 }
 .footer__container {
   position: relative;
+}
+@media (min-width: 1200px) {
+  .footer__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+@media (min-width: 768px) {
+  .footer__tablet-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 165px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 60px;
+  }
+}
+@media (min-width: 1200px) {
+  .footer__tablet-container {
+    gap: 70px;
+    margin-bottom: 0;
+  }
 }
 .footer__list:not(:last-child) {
   margin-bottom: 9px;
@@ -255,6 +284,11 @@ li {
   font-size: 14px;
   line-height: 1.7;
   font-style: normal;
+}
+@media (max-width: 767.5px) {
+  .footer__nav {
+    margin-bottom: 60px;
+  }
 }
 
 .form__label {
@@ -781,6 +815,11 @@ li {
   text-transform: uppercase;
   color: var(--text-color-white);
 }
+@media (min-width: 768px) {
+  .social-links__title {
+    margin-top: 12px;
+  }
+}
 .social-links__icon {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -813,7 +852,19 @@ li {
             justify-content: center;
   }
 }
+@media (max-width: 767.5px) {
+  .social-links__footer {
+    margin-bottom: 60px;
+  }
+}
 
+@media (min-width: 1200px) {
+  .subscription {
+    position: absolute;
+    right: 0;
+    top: 12px;
+  }
+}
 .subscription__title {
   margin-bottom: 20px;
   font-weight: 700;
@@ -822,16 +873,35 @@ li {
   text-transform: uppercase;
   color: var(--text-color-white);
 }
+@media (min-width: 1200px) {
+  .subscription__form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
 .subscription__form-input {
-  width: 358px;
+  width: 100%;
   height: 50px;
   padding: 0 16px;
-  margin-right: 12px;
+  margin-bottom: 20px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   background-color: var(--background-color-brand-primary);
   border-radius: 4px;
   color: rgba(255, 255, 255, 0.6);
   outline: none;
+}
+@media (min-width: 768px) {
+  .subscription__form-input {
+    width: 450px;
+  }
+}
+@media (min-width: 1200px) {
+  .subscription__form-input {
+    width: 358px;
+    margin-right: 12px;
+    margin-bottom: 0;
+  }
 }
 .subscription__form-input::-webkit-input-placeholder {
   font-size: 16px;
