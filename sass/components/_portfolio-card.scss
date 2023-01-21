@@ -1,4 +1,11 @@
 .portfolio-card {
+  @media (min-width: $bp-tablet) {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+  @media (min-width: $bp-desktop) {
+    flex-basis: calc((100% - 60px) / 3);
+  }
+
   &__name {
     margin-bottom: 4px;
     font-size: 18px;
@@ -54,5 +61,11 @@
 
   &__link:hover &__overlay {
     transform: translateY(0);
+  }
+
+  &:not(last-child) {
+    @media (max-width: $bp-tablet - 0.5) {
+      margin-bottom: 30px;
+    }
   }
 }

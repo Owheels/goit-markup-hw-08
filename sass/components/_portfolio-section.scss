@@ -1,19 +1,32 @@
 .portfolio-section {
+  padding: 60px 0;
+  @media (min-width: $bp-desktop) {
+    padding: 94px 0;
+  }
+
   &__title {
     @include invisible-title;
   }
 
   &__menu {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
     gap: 8px;
     margin-bottom: 50px;
+    @media (max-width: $bp-tablet - 0.5) {
+      max-width: 326px;
+    }
+    @media (min-width: $bp-tablet) {
+      justify-content: center;
+    }
   }
 
   &__list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
+    @media (min-width: $bp-tablet) {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
   }
 
   &__filter-button {
