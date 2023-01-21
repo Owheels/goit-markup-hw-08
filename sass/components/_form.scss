@@ -67,8 +67,12 @@
   &__checkbox {
     display: flex;
     margin-bottom: 30px;
-    font-size: 14px;
-    line-height: 1.71;
+    font-size: 12px;
+    line-height: 1.17;
+    @media (min-width: $bp-desktop) {
+      font-size: 14px;
+      line-height: 1.71;
+    }
   }
 
   &__checkbox-input {
@@ -83,10 +87,13 @@
 
   &__checkbox-icon {
     position: absolute;
-    margin: 4px 7px 0 12px;
+    margin: -2px 7px 0 12px;
     border: 2px solid var(--text-color-primary);
     border-radius: 2px;
     fill: transparent;
+    @media (min-width: $bp-desktop) {
+      margin-top: 4px;
+    }
   }
 
   &__checkbox-label {

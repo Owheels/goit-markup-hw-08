@@ -3,7 +3,6 @@
   align-items: center;
   justify-content: center;
   height: 100%;
-  padding: 20px 0;
 
   &__conteiner {
     position: relative;
@@ -11,11 +10,15 @@
     border-radius: 4px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     width: 100%;
-    max-width: 528px;
+    max-width: 450px;
     height: 100%;
-    max-height: 587px;
+    max-height: 612px;
     background-color: var(--background-color-white);
     overflow: auto;
+    @media (min-width: $bp-desktop) {
+      max-width: 528px;
+      max-height: 586px;
+    }
   }
 
   &__title {
@@ -23,8 +26,11 @@
     text-align: center;
     font-weight: 700;
     font-size: 20px;
-    line-height: 1.15;
+    line-height: 1.5;
     color: var(--text-color-primary);
+    @media (min-width: $bp-desktop) {
+      line-height: 1.15;
+    }
   }
 
   &__button-close {
