@@ -4,6 +4,7 @@
   background-color: var(--background-color-brand-secondary);
   @media (min-width: $bp-desktop) {
     padding: 94px 0;
+    margin-top: 0;
   }
 
   &__list {
